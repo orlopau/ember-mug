@@ -17,7 +17,6 @@ Size: 5 Bytes
 
 Byte | Value
 --- | ---
-
 0 | Battery percentage as UINT16 Little Endian
 1 | When 1, the device is charging
 2-3 | Maybe battery temperature as UINT16, encoded like the other temperatures
