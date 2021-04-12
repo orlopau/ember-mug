@@ -1,7 +1,7 @@
-**Target temperature**
+**Current temperature**
 ---
 
-Retrieves and sets the current temperature of the mug
+Retrieves the current temperature of the mug
 
 * **UUID**
 
