@@ -22,12 +22,12 @@ All commands have a service UUID of `fc543622236c4c948fa9944a3e5353fa`
 * [Target temperature](./docs/target-temp.md)
 * [Current temperature](./docs/current-temp.md)
 * [Battery percentage](./docs/battery.md)
-* [Temperature Unit](./docs/temperature-unit.md)
-* [Liquid Level](./docs/liquid-level.md)
-* [Liquid State](./docs/liquid-state.md)
-* [Mug Name](./docs/mug-name.md)
-* [Date & Timezone](./docs/time-date-zone.md)
+* [Temperature unit](./docs/temperature-unit.md)
+* [Liquid level](./docs/liquid-level.md)
+* [Liquid state](./docs/liquid-state.md)
+* [Mug name](./docs/mug-name.md)
+* [Date & timezone](./docs/time-date-zone.md)
 * [Push events](./docs/push-events.md)
-* [Firmware & Hardware Versions](./docs/push-events.md)
+* [Firmware & hardware versions](./docs/push-events.md)
 
 
