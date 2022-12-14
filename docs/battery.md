@@ -17,27 +17,20 @@ Size: 5 Bytes
 
 Byte | Value
 --- | ---
-0 | Battery percentage as UINT16 Little Endian
-1 | When 1, the device is charging
-2-3 | Maybe battery temperature as UINT16, encoded like the other temperatures
-4 | - (not known)
-
-Observation: While charging, the fourth bit is always 1 -> Here you can detect if the device is charging, 
-because the last 2 byte are enough to encode 0-100 percent.
+0 | Battery percentage (5 - 100. Not scaled to 0 - 255)
+1 | Charging status. 1 for plugged in, 0 for unplugged
+2-3 | Battery temperature as UINT16 Little Endian, encoded like the [other temperatures](./target-temp.md)
+4 | (Legacy) Most likely battery voltage
 
 * **Example Data**
 
-When receiving `4f-00-1c-0c-00`:
-
-We see the fourth byte is 0 -> Device is not charging.
+When receiving `4f 00 1c 0c 00`:
 
 `4f` -> 79%
-`1c-0c` -> 3100 (which maybe is 31.00 °C, battery temperature?)
 
-<br></br>
-When receiving `4f-01-1c-0c-00`:
+`00` -> Not charging
 
-We see the fourth byte is 1, therefore the device is charging.
+`1c 0c` -> 3100 (which maybe is 31.00 °C, battery temperature). Discarded by app
 
-`4f` -> 79%
-`1c-0c` -> 3100 (which maybe is 31.00 °C, but is not the same temperature shown in the app, maybe its another sensor? Or battery temperature?)
+`00` -> Battery Voltage. Not set by device and discarded by app
+
